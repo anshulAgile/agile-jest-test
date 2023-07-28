@@ -11,7 +11,7 @@ const Demo2 = () => {
     }, [])
 
     return (<>
-        <h1>User Info</h1>
+        <h2>User Info</h2>
         <div>
             <div>
                 <label htmlFor='email' placeholder="Email" >Email</label>

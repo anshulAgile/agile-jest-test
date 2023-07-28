@@ -6,6 +6,12 @@ import { render, screen } from "@testing-library/react"
 import Demo3 from "./index"
 import user from "@testing-library/user-event";
 
+/* 
+In this test we will predict count state's behavior in two state 
+1) when component is rendered 
+2) When user click on increment button 
+*/
+
 describe.only('Counter Demo', () => {
 
     // To check if app has input field and submit button 
@@ -22,7 +28,7 @@ describe.only('Counter Demo', () => {
 
     });
 
-    test("After click", async () => {
+    test("After increment click", async () => {
         user.setup();
         render(<Demo3 />);
 

@@ -7,6 +7,11 @@ import Demo1 from "."
 
 const user = 'Jhon'
 
+// describe is a global method provided by jest to group your tests together and it takes two arguments
+// 1) Group Name
+// 2) Test Callback function (LOGIC for test )
+// 3) We can also define nested describe blocks
+
 describe.only('User Component', () => {
 
     test('Component Rendered Correctly', () => {

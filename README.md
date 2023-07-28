@@ -1,46 +1,105 @@
-# Getting Started with Create React App
+================================
+Why do we need testing in react 
+================================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Manual testing is redundant once you develop a feature and have tested it once you add some extra feature you might need to again recheck whether old logic is still working or not 
+- once your app grows larger it's hard to test every details of your app
+- Upgrade your coding standards
+- Make code predictable
+- Quality Code
+- Less debugging more coding: With more test, fewer errors you will have and you can focus on the more complicated tasks.
+- TDD ( Test Driven Development ) : Write test cases before you develop anything.
 
-## Available Scripts
 
-In the project directory, you can run:
+================
+Types of test
+================
 
-### `npm start`
+- E2E test - To test from start to finish 
+- Integration Test - When you combine more than one component or functions together to test 
+- Unit Test - To test small chunks of code ex:- component , complex functions 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+=================
+JEST 
+=================
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- jest is a js framework 
+- It's a test runner that finds test files in your app and runs and determine whether test is passes or not and returns it in human readable form 
 
-### `npm test`
+- CRA gives jest and testing tools out of the box 
+- jest is available as a react-scripts dependency
+- CRA also provides sample app.test.tsx 
+- yarn test command start the jest in a watch mode 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+=========================
+Structure of Test
+=========================
 
-### `npm run build`
+-> See the example of App.test.tsx
+-> what is assertion 
+   - Assertion means the condition that decides whether test is passes or failed  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+===============================
+Watch mode and Filters for test 
+===============================
+-> run yarn run test to see those filters 
+-> .only and .skip
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+==============================
+File name convention
+==============================
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- .test.ts/js/tsx
+- .spec.ts/js/tsx
+- Best practice to add test file next to your component file 
 
-### `npm run eject`
+===========================
+DEMO 1
+===========================
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+============================
+Code Coverage
+============================
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- A metric to tell you how much of your code is tested 
+1) statement coverage 
+2) branches coverage
+3) function coverage
+4) line coverage 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- To get code coverage need to perform below command 
+   - yarn run test --coverage --watchAll
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   - watchAll :- gives whole apps report
+   - collectCoverageFrom :- to ask jest to include only selected files or folders ( Optional )   
 
-## Learn More
+=========================================
+For any test 3 things are required
+=========================================
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1) Render component
+2) Find an element rendered by component 
+3) To check whether that element fullfil the required condition or not 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+================================
+Demo 2
+================================
+
+- All about query 
+- DOcumentation : https://testing-library.com/docs/queries/about
+
+===============================
+Test PlayGround Extension
+===============================
+
+================================
+Demo 3
+================================
+
+- Learn about the user interaction click events
+
+
+
+NOTE: WHAT NOT TO TEST IN REACT 
+   - Any 3rd party library since they have already tested it (MUI , ant d)
+   - Not a critical function 

@@ -1,14 +1,12 @@
-/*
-
-*/
-
 import { render, screen } from "@testing-library/react"
 import Demo2 from "./index"
 
 describe.only('Login Form', () => {
 
-    // To check if app has input field and submit button 
-    // To get more info about role - https://testing-library.com/docs/queries/byrole/
+    // In this demo we will see how to get or check if app has input field and submit button 
+    // This process of finding elements are called queries
+    // To understand more about query (how to get elements) :- https://testing-library.com/docs/queries/about
+
     test("Login Rendered Correctly", async () => {
         render(<Demo2 />);
 
@@ -19,6 +17,7 @@ describe.only('Login Form', () => {
         // getByAltText used to get img tag containing that alt text 
         // getByTitle used to any element with title="" property 
 
+        // To get more info about role - https://testing-library.com/docs/queries/byrole/
         const emailElement = screen.getByRole('textbox', { name: 'Email' })
         const btnElement = screen.getByTestId((content) => content.includes('login-submit'))
 
