@@ -48,9 +48,13 @@ Code Coverage
 
 - A metric to tell you how much of your code is tested 
 1) statement coverage 
+   ex:- var x= 10; 
 2) branches coverage
+
 3) function coverage
+   ex:- any function
 4) line coverage 
+   ex:- var x= 10; console.log(x)
 
 - To get code coverage need to perform below command 
    - yarn run test --coverage --watchAll
